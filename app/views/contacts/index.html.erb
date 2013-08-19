@@ -1,13 +1,13 @@
 <h1>Your contacts</h1>
-<%= link_to "New Contact", new_user_contact_path(@user) %>
-<% if @contacts.nil? %>
-	<h2>Create a Contact</h2>
- <% else %>
-  <div class="contacts">
+<%= link_to "Create a Contact", new_user_contact_path(@user) %>  
+<div class="contacts">
 	<% @contacts.each do |contact| %>
 	  <ul>
-		  <li><%= contact %></li>
+		  <li><%= contact.firstname %></li>
+		  <li><%= contact.lastname %></li>
+		  <li><%= contact.email %></li>
+		  <li><%= contact.phone %></li>
+		  <li><%= contact.notes %></li>
 		</ul>
-		<% end %>
-	</div>
-<% end %>
+	<% end %>
+</div>
