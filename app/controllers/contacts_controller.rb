@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
   end
 
   def index
-  	@contacts = Contact.find_by(params[:user_id])
+  	@contacts = Contact.where(params[:id])
   end
 
 private
